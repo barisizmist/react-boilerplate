@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: './src/index.js',
   output: {
-    path: __dirname + 'build', //change this
+    path: __dirname + '/dist',
     publicPath: '/',
     filename: 'bundle.js',
   },
