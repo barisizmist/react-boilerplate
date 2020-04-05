@@ -1,35 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
+import { App } from './app';
 import { createStore } from 'redux';
 import messageReducer from './reducers/messageReducer';
-import addMessage from './actions/addMessage';
-import { Provider, connect } from 'react-redux';
+// import addMessage from './actions/addMessage';
+import { Provider } from 'react-redux';
 
 //React-Redux
-const mapStateToProps = (state) => {
-    return { messages: state };
-};
+// const mapStateToProps = (state) => {
+//     return { messages: state };
+// };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        submitNewMessage: (message) => {
-            dispatch(addMessage(message));
-        }
-    };
-};
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         submitNewMessage: (message) => {
+//             dispatch(addMessage(message));
+//         }
+//     };
+// };
+
 
 const store = createStore(messageReducer);
-const Container = connect(mapStateToProps, mapDispatchToProps)(App);
+// const Container = connect(mapStateToProps, mapDispatchToProps)(App);
 
-class AppWrapper extends Component {
-    render () {
-        return (
-            <Provider store={store}>
-                <Container/>
-            </Provider>
-        );
-    }
-}
-
-ReactDOM.render(<AppWrapper />, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}>
+    <App/>
+</Provider>, document.getElementById('root'));
