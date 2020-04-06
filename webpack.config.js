@@ -11,7 +11,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: './',
+        contentBase: './src/',
         publicPath: '/dist/'
     },
     module: {
@@ -29,7 +29,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve('./index.html')
+            template: path.resolve('./src/index.html')
         })
     ]
 };

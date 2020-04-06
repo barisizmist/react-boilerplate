@@ -19,7 +19,6 @@ import { Provider } from 'react-redux';
 //     };
 // };
 
-
 const store = createStore(messageReducer);
 // const Container = connect(mapStateToProps, mapDispatchToProps)(App);
 

@@ -35,3 +35,30 @@ input {
 .center {
   text-align: center;
 }
+.inc, .dec{
+  height: 30px;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.removeItem{
+  margin-left: auto;
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+.list {
+  padding-left: 0;
+  list-style: none;
+  .item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
